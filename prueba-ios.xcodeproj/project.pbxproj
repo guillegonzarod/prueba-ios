@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9947A23B296835A20088E86C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A23A296835A20088E86C /* AppDelegate.swift */; };
-		9947A23D296835A20088E86C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A23C296835A20088E86C /* SceneDelegate.swift */; };
-		9947A23F296835A20088E86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A23E296835A20088E86C /* ViewController.swift */; };
-		9947A242296835A20088E86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9947A240296835A20088E86C /* Main.storyboard */; };
 		9947A245296835A20088E86C /* prueba_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */; };
 		9947A247296835A40088E86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9947A246296835A40088E86C /* Assets.xcassets */; };
 		9947A24A296835A40088E86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9947A248296835A40088E86C /* LaunchScreen.storyboard */; };
@@ -39,9 +36,6 @@
 /* Begin PBXFileReference section */
 		9947A237296835A20088E86C /* prueba-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "prueba-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9947A23A296835A20088E86C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9947A23C296835A20088E86C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9947A23E296835A20088E86C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9947A241296835A20088E86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9947A244296835A20088E86C /* prueba_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = prueba_ios.xcdatamodel; sourceTree = "<group>"; };
 		9947A246296835A40088E86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9947A249296835A40088E86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,13 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				9947A23A296835A20088E86C /* AppDelegate.swift */,
-				9947A23C296835A20088E86C /* SceneDelegate.swift */,
-				9947A23E296835A20088E86C /* ViewController.swift */,
-				9947A240296835A20088E86C /* Main.storyboard */,
+				996AB88C29683B8000897A86 /* Controller */,
+				996AB88B29683B6900897A86 /* Model */,
+				996AB88A29683B5A00897A86 /* View */,
+				996AB889296838D100897A86 /* Supporting Files */,
 				9947A246296835A40088E86C /* Assets.xcassets */,
-				9947A248296835A40088E86C /* LaunchScreen.storyboard */,
-				9947A24B296835A40088E86C /* Info.plist */,
-				9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */,
 			);
 			path = "prueba-ios";
 			sourceTree = "<group>";
@@ -128,6 +120,45 @@
 				9947A260296835A40088E86C /* prueba_iosUITestsLaunchTests.swift */,
 			);
 			path = "prueba-iosUITests";
+			sourceTree = "<group>";
+		};
+		996AB889296838D100897A86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9947A24B296835A40088E86C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		996AB88A29683B5A00897A86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				996AB88D29683C0600897A86 /* Launch */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		996AB88B29683B6900897A86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		996AB88C29683B8000897A86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		996AB88D29683C0600897A86 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9947A248296835A40088E86C /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +267,6 @@
 			files = (
 				9947A24A296835A40088E86C /* LaunchScreen.storyboard in Resources */,
 				9947A247296835A40088E86C /* Assets.xcassets in Resources */,
-				9947A242296835A20088E86C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9947A245296835A20088E86C /* prueba_ios.xcdatamodeld in Sources */,
-				9947A23F296835A20088E86C /* ViewController.swift in Sources */,
 				9947A23B296835A20088E86C /* AppDelegate.swift in Sources */,
-				9947A23D296835A20088E86C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9947A240296835A20088E86C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9947A241296835A20088E86C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9947A248296835A40088E86C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,12 +463,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68PR7383C4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "prueba-ios/Info.plist";
+				INFOPLIST_FILE = "prueba-ios/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Prueba iOS";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,12 +492,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68PR7383C4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "prueba-ios/Info.plist";
+				INFOPLIST_FILE = "prueba-ios/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Prueba iOS";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
