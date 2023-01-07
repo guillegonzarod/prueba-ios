@@ -26,6 +26,15 @@
 		999B3695296979B500CCF898 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B3691296979B500CCF898 /* DetailViewController.xib */; };
 		999B3696296979B500CCF898 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B3691296979B500CCF898 /* DetailViewController.xib */; };
 		999B3697296979B500CCF898 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B3691296979B500CCF898 /* DetailViewController.xib */; };
+		999B36A42969D1E200CCF898 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36A22969D1E200CCF898 /* CustomCell.swift */; };
+		999B36A52969D1E200CCF898 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36A22969D1E200CCF898 /* CustomCell.swift */; };
+		999B36A62969D1E200CCF898 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36A22969D1E200CCF898 /* CustomCell.swift */; };
+		999B36A72969D1E200CCF898 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B36A32969D1E200CCF898 /* CustomCell.xib */; };
+		999B36A82969D1E200CCF898 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B36A32969D1E200CCF898 /* CustomCell.xib */; };
+		999B36A92969D1E200CCF898 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B36A32969D1E200CCF898 /* CustomCell.xib */; };
+		999B36AB2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
+		999B36AC2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
+		999B36AD2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,9 @@
 		9947A260296835A40088E86C /* prueba_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prueba_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		999B3690296979B500CCF898 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		999B3691296979B500CCF898 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		999B36A22969D1E200CCF898 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		999B36A32969D1E200CCF898 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		999B36AA2969ED6400CCF898 /* SharedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +229,9 @@
 		999B36992969AC9100CCF898 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				999B36A22969D1E200CCF898 /* CustomCell.swift */,
+				999B36A32969D1E200CCF898 /* CustomCell.xib */,
+				999B36AA2969ED6400CCF898 /* SharedExtensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -325,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999B36A72969D1E200CCF898 /* CustomCell.xib in Resources */,
 				9947A24A296835A40088E86C /* LaunchScreen.storyboard in Resources */,
 				9947A247296835A40088E86C /* Assets.xcassets in Resources */,
 				99121038296960430071A46D /* HomeViewController.xib in Resources */,
@@ -336,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999B36A82969D1E200CCF898 /* CustomCell.xib in Resources */,
 				99121039296960430071A46D /* HomeViewController.xib in Resources */,
 				999B3696296979B500CCF898 /* DetailViewController.xib in Resources */,
 			);
@@ -345,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999B36A92969D1E200CCF898 /* CustomCell.xib in Resources */,
 				9912103A296960430071A46D /* HomeViewController.xib in Resources */,
 				999B3697296979B500CCF898 /* DetailViewController.xib in Resources */,
 			);
@@ -359,6 +377,8 @@
 			files = (
 				9947A245296835A20088E86C /* prueba_ios.xcdatamodeld in Sources */,
 				9947A23B296835A20088E86C /* AppDelegate.swift in Sources */,
+				999B36AB2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
+				999B36A42969D1E200CCF898 /* CustomCell.swift in Sources */,
 				99121035296960430071A46D /* HomeViewController.swift in Sources */,
 				999B3692296979B500CCF898 /* DetailViewController.swift in Sources */,
 			);
@@ -370,6 +390,8 @@
 			files = (
 				999B3693296979B500CCF898 /* DetailViewController.swift in Sources */,
 				9947A255296835A40088E86C /* prueba_iosTests.swift in Sources */,
+				999B36AC2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
+				999B36A52969D1E200CCF898 /* CustomCell.swift in Sources */,
 				99121036296960430071A46D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +402,8 @@
 			files = (
 				9947A25F296835A40088E86C /* prueba_iosUITests.swift in Sources */,
 				9947A261296835A40088E86C /* prueba_iosUITestsLaunchTests.swift in Sources */,
+				999B36AD2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
+				999B36A62969D1E200CCF898 /* CustomCell.swift in Sources */,
 				99121037296960430071A46D /* HomeViewController.swift in Sources */,
 				999B3694296979B500CCF898 /* DetailViewController.swift in Sources */,
 			);
