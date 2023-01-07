@@ -20,8 +20,12 @@ class DetailViewController: UIViewController {
     
     var itemList: [ItemDetail] = []
     
+    // MARK: - Constants
+    
+    private var editMode: Bool = false
+    
     // MARK: - Life Cycle
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Editar", style: .plain, target: self, action: #selector(self.editCharacter))
@@ -33,7 +37,6 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(self.mockCharacter)
         self.navigationItem.title = self.mockCharacter.name
         self.itemList.append(ItemDetail(name: "Nombre:", description: self.mockCharacter.name))
         self.itemList.append(ItemDetail(name: "Status:", description: self.mockCharacter.status))
@@ -46,7 +49,31 @@ class DetailViewController: UIViewController {
     // MARK: - Functions
     
     @objc private func editCharacter() {
-        print("Editing...")
+                
+        let rowCount  = self.detailTable.numberOfRows(inSection: 0)
+        for row in 0 ..< rowCount {
+            let cell = self.detailTable.cellForRow(at: NSIndexPath(row: row, section: 0) as IndexPath) as? DetailCustomCell
+            cell!.textFieldC?.isUserInteractionEnabled = self.editMode ? false : true
+        }
+        
+        if !self.editMode {
+            self.navigationItem.rightBarButtonItem?.title = "Guardar"
+            self.editMode = !self.editMode
+        } else {
+            let alert = UIAlertController(title: nil, message: "Guardando...", preferredStyle: .alert)
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.startAnimating();
+            alert.view.addSubview(loadingIndicator)
+            self.present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.async {
+                self.dismiss(animated: false, completion: nil)
+                self.navigationItem.rightBarButtonItem?.title = "Editar"
+                self.editMode = !self.editMode
+            }
+            
+        }
     }
 }
 
@@ -71,17 +98,18 @@ extension DetailViewController: UITableViewDataSource {
 extension DetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
     }
 }
 
 struct ItemDetail {
     var name: String = ""
     var description: String = ""
+    var readOnly: Bool = false
     
     init(name: String, description: String){
-            self.name  = name
-            self.description = description
-        }
+        self.name  = name
+        self.description = description
+    }
 }
 

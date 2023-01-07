@@ -17,12 +17,8 @@ final class HomeViewController: UIViewController {
     // MARK: - Variables
     
     // MARK: - Constants
-    
-    private let mockCharacter = {
         
-    }
-    
-    private let mockData: [Character] = [
+    private var mockData: [Character] = [
         Character(),
         Character(),
         Character(),
@@ -87,6 +83,23 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.detailVc.mockCharacter = mockData[indexPath.row]
         self.navigationController?.pushViewController(self.detailVc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+            -> UISwipeActionsConfiguration? {
+            let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+                self.mockData.remove(at: indexPath.row)
+                self.contentTable.deleteRows(at: [indexPath], with: .automatic)
+                completionHandler(true)
+            }
+            deleteAction.image = UIImage(systemName: "trash")
+            deleteAction.backgroundColor = .systemRed
+            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+            return configuration
     }
 }
 

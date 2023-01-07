@@ -19,6 +19,7 @@ class DetailCustomCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.labelC.font = UIFont.boldSystemFont(ofSize: 15)
+        self.textFieldC.isUserInteractionEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
