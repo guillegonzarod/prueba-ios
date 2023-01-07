@@ -72,7 +72,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = self.contentTable.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as? CustomCell
+        let cell = self.contentTable.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as? CustomCell
         cell!.imageC?.load(url: URL(string: self.mockData[indexPath.row].image)!)
         cell!.firstLabelC?.text = self.mockData[indexPath.row].name
         cell!.secondLabelC?.text = self.mockData[indexPath.row].species
