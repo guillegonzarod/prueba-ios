@@ -11,10 +11,10 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.loadRootView()
         return true
     }
 
@@ -61,6 +61,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    // MARK: - Functions
+    
+    /// Load the root view of the application.
+    private func loadRootView() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let vc = HomeViewController()
+        self.window?.rootViewController = UINavigationController(rootViewController: vc)
+        self.window?.makeKeyAndVisible()
     }
 
 }
