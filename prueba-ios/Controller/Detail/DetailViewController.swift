@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
     
@@ -23,6 +24,8 @@ class DetailViewController: UIViewController {
     // MARK: - Constants
     
     private var editMode: Bool = false
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // MARK: - Life Cycle
     
@@ -43,8 +46,8 @@ class DetailViewController: UIViewController {
         self.itemList.append(ItemDetail(name: "Status:", description: self.character.status ?? ""))
         self.itemList.append(ItemDetail(name: "Especie:", description: self.character.species ?? ""))
         self.itemList.append(ItemDetail(name: "Género:", description: self.character.gender ?? ""))
-        self.itemList.append(ItemDetail(name: "Origen:", description: self.character.origin?.name ?? ""))
-        self.itemList.append(ItemDetail(name: "Procedencia:", description: self.character.location?.name ?? ""))
+        self.itemList.append(ItemDetail(name: "Origen:", description: self.character.originName ?? ""))
+        self.itemList.append(ItemDetail(name: "Procedencia:", description: self.character.locationName ?? ""))
         DispatchQueue.main.async {
             self.detailTable.reloadData()
         }
@@ -66,7 +69,36 @@ class DetailViewController: UIViewController {
         } else {
             
             SharedProvider.shared.showLoadingAlert(vc: self, message: "Guardando personaje")
-            
+                        
+            for row in 0 ..< rowCount {
+                let cell = self.detailTable.cellForRow(at: NSIndexPath(row: row, section: 0) as IndexPath) as? DetailCustomCell
+                let characterToEdit = self.character
+                
+                switch cell!.labelC.text! {
+                case "Nombre:":
+                    characterToEdit.name = cell!.textFieldC.text!
+                    break
+                case "Status:":
+                    characterToEdit.status = cell!.textFieldC.text!
+                    break
+                case "Especie:":
+                    characterToEdit.species = cell!.textFieldC.text!
+                    break
+                case "Género:":
+                    characterToEdit.gender = cell!.textFieldC.text!
+                    break
+                case "Origen:":
+                    characterToEdit.originName = cell!.textFieldC.text!
+                    break
+                case "Procedencia:":
+                    characterToEdit.locationName = cell!.textFieldC.text!
+                    break
+                default:
+                
+                    break
+                }
+            }
+            try! self.context.save()
             DispatchQueue.main.async {
                 self.dismiss(animated: false, completion: nil)
                 self.navigationItem.rightBarButtonItem?.title = "Editar"

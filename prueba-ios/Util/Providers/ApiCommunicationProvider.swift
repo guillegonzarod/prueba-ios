@@ -27,10 +27,10 @@ final class ApiCommunicationProvider {
     /// - Parameters:
     /// - success: Function that is executed in case the response has been successful.
     /// - failure: Function that is executed in case the response has failed.
-    func getAllCharacters(success: @escaping (_ characters: [Character]) -> (), failure: @escaping (_ error: Error?) -> ()) {
+    func getAllCharacters(success: @escaping (_ characters: [CharacterStruct]) -> (), failure: @escaping (_ error: Error?) -> ()) {
         let url = "\(baseUrl)character"
         
-        AF.request(url, method: .get).validate(statusCode: statusOk).responseDecodable (of: CharacterResponse.self) {
+        AF.request(url, method: .get).validate(statusCode: statusOk).responseDecodable (of: CharacterResponseStruct.self) {
             response in
             
             if let characters = response.value?.results {

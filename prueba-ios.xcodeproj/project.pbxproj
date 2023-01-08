@@ -38,6 +38,14 @@
 		999B36AB2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
 		999B36AC2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
 		999B36AD2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
+		99DF2E1E296B0E3900D5F7A2 /* prueba_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */; };
+		99DF2E1F296B0E3A00D5F7A2 /* prueba_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */; };
+		99DF2E2A296B30EE00D5F7A2 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF2E28296B30EE00D5F7A2 /* Character+CoreDataClass.swift */; };
+		99DF2E2B296B30EE00D5F7A2 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF2E28296B30EE00D5F7A2 /* Character+CoreDataClass.swift */; };
+		99DF2E2C296B30EE00D5F7A2 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF2E28296B30EE00D5F7A2 /* Character+CoreDataClass.swift */; };
+		99DF2E2D296B30EE00D5F7A2 /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF2E29296B30EE00D5F7A2 /* Character+CoreDataProperties.swift */; };
+		99DF2E2E296B30EE00D5F7A2 /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF2E29296B30EE00D5F7A2 /* Character+CoreDataProperties.swift */; };
+		99DF2E2F296B30EE00D5F7A2 /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF2E29296B30EE00D5F7A2 /* Character+CoreDataProperties.swift */; };
 		99F6E457296AB6DC008D9C0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 99F6E456296AB6DC008D9C0C /* Alamofire */; };
 		99FAA2D72969FA8400E17FCB /* DetailCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */; };
 		99FAA2D82969FA8400E17FCB /* DetailCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */; };
@@ -90,6 +98,8 @@
 		999B36A22969D1E200CCF898 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		999B36A32969D1E200CCF898 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		999B36AA2969ED6400CCF898 /* SharedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedExtensions.swift; sourceTree = "<group>"; };
+		99DF2E28296B30EE00D5F7A2 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		99DF2E29296B30EE00D5F7A2 /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCustomCell.swift; sourceTree = "<group>"; };
 		99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCustomCell.xib; sourceTree = "<group>"; };
 		99FAA2E4296AB39900E17FCB /* ApiCommunicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCommunicationProvider.swift; sourceTree = "<group>"; };
@@ -194,6 +204,8 @@
 		996AB88B29683B6900897A86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				99DF2E28296B30EE00D5F7A2 /* Character+CoreDataClass.swift */,
+				99DF2E29296B30EE00D5F7A2 /* Character+CoreDataProperties.swift */,
 				9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */,
 				99FAA2E8296AB4EE00E17FCB /* Character.swift */,
 			);
@@ -437,8 +449,10 @@
 			files = (
 				99FAA2E9296AB4EE00E17FCB /* Character.swift in Sources */,
 				996C1C33296AC44D0018E47A /* SharedProvider.swift in Sources */,
+				99DF2E2A296B30EE00D5F7A2 /* Character+CoreDataClass.swift in Sources */,
 				9947A245296835A20088E86C /* prueba_ios.xcdatamodeld in Sources */,
 				9947A23B296835A20088E86C /* AppDelegate.swift in Sources */,
+				99DF2E2D296B30EE00D5F7A2 /* Character+CoreDataProperties.swift in Sources */,
 				999B36AB2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
 				999B36A42969D1E200CCF898 /* CustomCell.swift in Sources */,
 				99FAA2E5296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */,
@@ -454,12 +468,15 @@
 			files = (
 				99FAA2E6296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */,
 				999B3693296979B500CCF898 /* DetailViewController.swift in Sources */,
+				99DF2E2B296B30EE00D5F7A2 /* Character+CoreDataClass.swift in Sources */,
 				9947A255296835A40088E86C /* prueba_iosTests.swift in Sources */,
 				999B36AC2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
+				99DF2E2E296B30EE00D5F7A2 /* Character+CoreDataProperties.swift in Sources */,
 				99FAA2D82969FA8400E17FCB /* DetailCustomCell.swift in Sources */,
 				999B36A52969D1E200CCF898 /* CustomCell.swift in Sources */,
 				996C1C34296AC44D0018E47A /* SharedProvider.swift in Sources */,
 				99121036296960430071A46D /* HomeViewController.swift in Sources */,
+				99DF2E1E296B0E3900D5F7A2 /* prueba_ios.xcdatamodeld in Sources */,
 				99FAA2EA296AB4EE00E17FCB /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,11 +486,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FAA2EB296AB4EE00E17FCB /* Character.swift in Sources */,
+				99DF2E2C296B30EE00D5F7A2 /* Character+CoreDataClass.swift in Sources */,
 				996C1C35296AC44D0018E47A /* SharedProvider.swift in Sources */,
 				9947A25F296835A40088E86C /* prueba_iosUITests.swift in Sources */,
 				9947A261296835A40088E86C /* prueba_iosUITestsLaunchTests.swift in Sources */,
 				999B36AD2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
 				999B36A62969D1E200CCF898 /* CustomCell.swift in Sources */,
+				99DF2E1F296B0E3A00D5F7A2 /* prueba_ios.xcdatamodeld in Sources */,
+				99DF2E2F296B30EE00D5F7A2 /* Character+CoreDataProperties.swift in Sources */,
 				99FAA2E7296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */,
 				99FAA2D92969FA8400E17FCB /* DetailCustomCell.swift in Sources */,
 				99121037296960430071A46D /* HomeViewController.swift in Sources */,

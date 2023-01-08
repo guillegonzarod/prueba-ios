@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class HomeViewController: UIViewController {
     
@@ -16,12 +17,14 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Variables
     
-    // MARK: - Constants
+    private var characters: [Character]?
     
-    private var characters: [Character] = []
+    // MARK: - Constants
     
     /// Instance of DetailViewController.
     private let detailVc = DetailViewController()
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // MARK: - Initialization
     
@@ -46,15 +49,67 @@ final class HomeViewController: UIViewController {
         self.contentTable.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "customcell")
         SharedProvider.shared.showLoadingAlert(vc: self, message: "Cargando personajes")
         ApiCommunicationProvider.shared.getAllCharacters(success: { (characters) in
-            self.characters = characters
+            
+            self.delete(entityName: "Character")
+            
+            for c in characters {
+                                
+                let character = Character(context: self.context)
+                character.id = c.id!
+                character.name = c.name
+                character.status = c.status
+                character.species = c.species
+                character.type = c.type
+                character.gender = c.gender
+                character.originName = c.origin?.name
+                character.originUrl = c.origin?.url
+                character.locationName = c.location?.name
+                character.locationUrl = c.location?.url
+                character.image = c.image
+                character.episode = c.episode
+                character.url = c.url
+                character.created = c.created
+            }
+            
+            try! self.context.save()
+            
             DispatchQueue.main.async {
-                self.contentTable.reloadData()
+                self.fetchCharacters()
                 self.dismiss(animated: false, completion: nil)
             }
         }, failure: { (error) in
             self.dismiss(animated: false, completion: nil)
             SharedProvider.shared.showAlert(vc: self, title: "ERROR", message: error.debugDescription, lifespanSeconds: 2)
         })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchCharacters()
+    }
+    
+    // MARK: - Functions
+    
+    func delete(entityName: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.execute(deleteRequest)
+        } catch let error as NSError {
+            SharedProvider.shared.showAlert(vc: self, title: "ERROR", message: error.debugDescription, lifespanSeconds: 2)
+        }
+    }
+    
+    private func fetchCharacters() {
+        do {
+            self.characters = []
+            self.characters = try context.fetch(Character.fetchRequest())
+            DispatchQueue.main.async {
+                self.contentTable.reloadData()
+            }
+        } catch {
+            SharedProvider.shared.showAlert(vc: self, title: "ERROR", message: "Se ha producido un error al recuperar los datos", lifespanSeconds: 2)
+        }
     }
     
 }
@@ -64,14 +119,14 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.characters.count
+        return self.characters?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.contentTable.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as? CustomCell
-        cell!.imageC?.load(url: URL(string: self.characters[indexPath.row].image!)!)
-        cell!.firstLabelC?.text = self.characters[indexPath.row].name
-        cell!.secondLabelC?.text = self.characters[indexPath.row].species
+        cell!.imageC?.load(url: URL(string: self.characters![indexPath.row].image!)!)
+        cell!.firstLabelC?.text = self.characters![indexPath.row].name
+        cell!.secondLabelC?.text = self.characters![indexPath.row].species
         return cell!
     }
 }
@@ -81,7 +136,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.detailVc.character = characters[indexPath.row]
+        self.detailVc.character = characters![indexPath.row]
         self.navigationController?.pushViewController(self.detailVc, animated: true)
     }
     
@@ -92,9 +147,15 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
     -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
-            self.characters.remove(at: indexPath.row)
+            let characterToDelete = self.characters![indexPath.row]
+            self.context.delete(characterToDelete)
+            try! self.context.save()
+            self.characters!.remove(at: indexPath.row)
             self.contentTable.deleteRows(at: [indexPath], with: .automatic)
-            completionHandler(true)
+            DispatchQueue.main.async {
+                self.fetchCharacters()
+                completionHandler(true)
+            }
         }
         deleteAction.image = UIImage(systemName: "trash")
         deleteAction.backgroundColor = .systemRed
