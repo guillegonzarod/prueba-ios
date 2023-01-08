@@ -20,6 +20,9 @@
 		9947A255296835A40088E86C /* prueba_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A254296835A40088E86C /* prueba_iosTests.swift */; };
 		9947A25F296835A40088E86C /* prueba_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A25E296835A40088E86C /* prueba_iosUITests.swift */; };
 		9947A261296835A40088E86C /* prueba_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947A260296835A40088E86C /* prueba_iosUITestsLaunchTests.swift */; };
+		996C1C33296AC44D0018E47A /* SharedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C1C32296AC44D0018E47A /* SharedProvider.swift */; };
+		996C1C34296AC44D0018E47A /* SharedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C1C32296AC44D0018E47A /* SharedProvider.swift */; };
+		996C1C35296AC44D0018E47A /* SharedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C1C32296AC44D0018E47A /* SharedProvider.swift */; };
 		999B3692296979B500CCF898 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B3690296979B500CCF898 /* DetailViewController.swift */; };
 		999B3693296979B500CCF898 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B3690296979B500CCF898 /* DetailViewController.swift */; };
 		999B3694296979B500CCF898 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B3690296979B500CCF898 /* DetailViewController.swift */; };
@@ -35,12 +38,19 @@
 		999B36AB2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
 		999B36AC2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
 		999B36AD2969ED6400CCF898 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B36AA2969ED6400CCF898 /* SharedExtensions.swift */; };
+		99F6E457296AB6DC008D9C0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 99F6E456296AB6DC008D9C0C /* Alamofire */; };
 		99FAA2D72969FA8400E17FCB /* DetailCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */; };
 		99FAA2D82969FA8400E17FCB /* DetailCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */; };
 		99FAA2D92969FA8400E17FCB /* DetailCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */; };
 		99FAA2DA2969FA8400E17FCB /* DetailCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */; };
 		99FAA2DB2969FA8400E17FCB /* DetailCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */; };
 		99FAA2DC2969FA8400E17FCB /* DetailCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */; };
+		99FAA2E5296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2E4296AB39900E17FCB /* ApiCommunicationProvider.swift */; };
+		99FAA2E6296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2E4296AB39900E17FCB /* ApiCommunicationProvider.swift */; };
+		99FAA2E7296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2E4296AB39900E17FCB /* ApiCommunicationProvider.swift */; };
+		99FAA2E9296AB4EE00E17FCB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2E8296AB4EE00E17FCB /* Character.swift */; };
+		99FAA2EA296AB4EE00E17FCB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2E8296AB4EE00E17FCB /* Character.swift */; };
+		99FAA2EB296AB4EE00E17FCB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAA2E8296AB4EE00E17FCB /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +84,7 @@
 		9947A25A296835A40088E86C /* prueba-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prueba-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9947A25E296835A40088E86C /* prueba_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prueba_iosUITests.swift; sourceTree = "<group>"; };
 		9947A260296835A40088E86C /* prueba_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prueba_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		996C1C32296AC44D0018E47A /* SharedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProvider.swift; sourceTree = "<group>"; };
 		999B3690296979B500CCF898 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		999B3691296979B500CCF898 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		999B36A22969D1E200CCF898 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -81,6 +92,8 @@
 		999B36AA2969ED6400CCF898 /* SharedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedExtensions.swift; sourceTree = "<group>"; };
 		99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCustomCell.swift; sourceTree = "<group>"; };
 		99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCustomCell.xib; sourceTree = "<group>"; };
+		99FAA2E4296AB39900E17FCB /* ApiCommunicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCommunicationProvider.swift; sourceTree = "<group>"; };
+		99FAA2E8296AB4EE00E17FCB /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F6E457296AB6DC008D9C0C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */,
+				99FAA2E8296AB4EE00E17FCB /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +233,34 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		996C1C2A296ABAFA0018E47A /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				999B36A22969D1E200CCF898 /* CustomCell.swift */,
+				999B36A32969D1E200CCF898 /* CustomCell.xib */,
+				99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */,
+				99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		996C1C2B296ABB4D0018E47A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				999B36AA2969ED6400CCF898 /* SharedExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		996C1C2C296ABB740018E47A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				99FAA2E4296AB39900E17FCB /* ApiCommunicationProvider.swift */,
+				996C1C32296AC44D0018E47A /* SharedProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		999B368F2969796000CCF898 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,11 +280,9 @@
 		999B36992969AC9100CCF898 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				999B36A22969D1E200CCF898 /* CustomCell.swift */,
-				999B36A32969D1E200CCF898 /* CustomCell.xib */,
-				99FAA2D52969FA8400E17FCB /* DetailCustomCell.swift */,
-				99FAA2D62969FA8400E17FCB /* DetailCustomCell.xib */,
-				999B36AA2969ED6400CCF898 /* SharedExtensions.swift */,
+				996C1C2C296ABB740018E47A /* Providers */,
+				996C1C2B296ABB4D0018E47A /* Extensions */,
+				996C1C2A296ABAFA0018E47A /* CustomCells */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -262,6 +303,9 @@
 			dependencies = (
 			);
 			name = "prueba-ios";
+			packageProductDependencies = (
+				99F6E456296AB6DC008D9C0C /* Alamofire */,
+			);
 			productName = "prueba-ios";
 			productReference = 9947A237296835A20088E86C /* prueba-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +378,9 @@
 				Base,
 			);
 			mainGroup = 9947A22E296835A20088E86C;
+			packageReferences = (
+				99F6E455296AB6DC008D9C0C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9947A238296835A20088E86C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -388,10 +435,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FAA2E9296AB4EE00E17FCB /* Character.swift in Sources */,
+				996C1C33296AC44D0018E47A /* SharedProvider.swift in Sources */,
 				9947A245296835A20088E86C /* prueba_ios.xcdatamodeld in Sources */,
 				9947A23B296835A20088E86C /* AppDelegate.swift in Sources */,
 				999B36AB2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
 				999B36A42969D1E200CCF898 /* CustomCell.swift in Sources */,
+				99FAA2E5296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */,
 				99FAA2D72969FA8400E17FCB /* DetailCustomCell.swift in Sources */,
 				99121035296960430071A46D /* HomeViewController.swift in Sources */,
 				999B3692296979B500CCF898 /* DetailViewController.swift in Sources */,
@@ -402,12 +452,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FAA2E6296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */,
 				999B3693296979B500CCF898 /* DetailViewController.swift in Sources */,
 				9947A255296835A40088E86C /* prueba_iosTests.swift in Sources */,
 				999B36AC2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
 				99FAA2D82969FA8400E17FCB /* DetailCustomCell.swift in Sources */,
 				999B36A52969D1E200CCF898 /* CustomCell.swift in Sources */,
+				996C1C34296AC44D0018E47A /* SharedProvider.swift in Sources */,
 				99121036296960430071A46D /* HomeViewController.swift in Sources */,
+				99FAA2EA296AB4EE00E17FCB /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FAA2EB296AB4EE00E17FCB /* Character.swift in Sources */,
+				996C1C35296AC44D0018E47A /* SharedProvider.swift in Sources */,
 				9947A25F296835A40088E86C /* prueba_iosUITests.swift in Sources */,
 				9947A261296835A40088E86C /* prueba_iosUITestsLaunchTests.swift in Sources */,
 				999B36AD2969ED6400CCF898 /* SharedExtensions.swift in Sources */,
 				999B36A62969D1E200CCF898 /* CustomCell.swift in Sources */,
+				99FAA2E7296AB39900E17FCB /* ApiCommunicationProvider.swift in Sources */,
 				99FAA2D92969FA8400E17FCB /* DetailCustomCell.swift in Sources */,
 				99121037296960430071A46D /* HomeViewController.swift in Sources */,
 				999B3694296979B500CCF898 /* DetailViewController.swift in Sources */,
@@ -740,6 +796,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99F6E455296AB6DC008D9C0C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99F6E456296AB6DC008D9C0C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99F6E455296AB6DC008D9C0C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9947A243296835A20088E86C /* prueba_ios.xcdatamodeld */ = {

@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     
     // MARK: - Variables
     
-    var mockCharacter: Character = Character()
+    var character: Character = Character()
     
     var itemList: [ItemDetail] = []
     
@@ -37,13 +37,17 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = self.mockCharacter.name
-        self.itemList.append(ItemDetail(name: "Nombre:", description: self.mockCharacter.name))
-        self.itemList.append(ItemDetail(name: "Status:", description: self.mockCharacter.status))
-        self.itemList.append(ItemDetail(name: "Especie:", description: self.mockCharacter.species))
-        self.itemList.append(ItemDetail(name: "Género:", description: self.mockCharacter.gender))
-        self.itemList.append(ItemDetail(name: "Origen:", description: self.mockCharacter.origin.name))
-        self.itemList.append(ItemDetail(name: "Procedencia:", description: self.mockCharacter.location.name))
+        self.navigationItem.title = self.character.name
+        self.itemList = []
+        self.itemList.append(ItemDetail(name: "Nombre:", description: self.character.name ?? ""))
+        self.itemList.append(ItemDetail(name: "Status:", description: self.character.status ?? ""))
+        self.itemList.append(ItemDetail(name: "Especie:", description: self.character.species ?? ""))
+        self.itemList.append(ItemDetail(name: "Género:", description: self.character.gender ?? ""))
+        self.itemList.append(ItemDetail(name: "Origen:", description: self.character.origin?.name ?? ""))
+        self.itemList.append(ItemDetail(name: "Procedencia:", description: self.character.location?.name ?? ""))
+        DispatchQueue.main.async {
+            self.detailTable.reloadData()
+        }
     }
     
     // MARK: - Functions
@@ -60,12 +64,8 @@ class DetailViewController: UIViewController {
             self.navigationItem.rightBarButtonItem?.title = "Guardar"
             self.editMode = !self.editMode
         } else {
-            let alert = UIAlertController(title: nil, message: "Guardando...", preferredStyle: .alert)
-            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-            loadingIndicator.hidesWhenStopped = true
-            loadingIndicator.startAnimating();
-            alert.view.addSubview(loadingIndicator)
-            self.present(alert, animated: true, completion: nil)
+            
+            SharedProvider.shared.showLoadingAlert(vc: self, message: "Guardando personaje")
             
             DispatchQueue.main.async {
                 self.dismiss(animated: false, completion: nil)
